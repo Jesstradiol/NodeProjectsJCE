@@ -1,0 +1,28 @@
+{
+  "name": "nodeprojectsjce",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Capstone solo Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/nodeServer.js"
+  },
+  "author": "Jessica Elsener",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesstradiol/CapstoneSoloProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jesstradiol/CapstoneSoloProject/issues"
+  },
+  "homepage": "https://github.com/Jesstradiol/CapstoneSoloProject#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
