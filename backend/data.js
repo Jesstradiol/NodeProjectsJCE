@@ -1,4 +1,24 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+
+    users: [
+        {
+        userName: 'Jessica Clarice',
+        userEmail: 'HBIC@inCharge.org',
+        userPassword: bcrypt.hashAsync('myPassword1234', 8),
+        isAdmin: true
+        },
+        {
+        userName: 'SuperUSer',
+        userEmail: 'superUser@user.shop',
+        userPassword: bcrypt.hashAsync('userPassWord1234', 8),
+        isAdmin: false
+        }
+
+    ],
+
+
     albums: [
         {
             AlbumID: '3778',
