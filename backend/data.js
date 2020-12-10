@@ -6,13 +6,13 @@ const data = {
         {
         userName: 'Jessica Clarice',
         userEmail: 'HBIC@inCharge.org',
-        userPassword: bcrypt.hashAsync('myPassword1234', 8),
+        userPassword: bcrypt.hashSync('myPassword1234', 8),
         isAdmin: true
         },
         {
         userName: 'SuperUSer',
         userEmail: 'superUser@user.shop',
-        userPassword: bcrypt.hashAsync('userPassWord1234', 8),
+        userPassword: bcrypt.hashSync('userPassWord1234', 8),
         isAdmin: false
         }
 
