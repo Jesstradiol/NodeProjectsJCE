@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
+    "mongoose": "^5.11.5",
     "mysql": "^2.18.1"
   },
   "repository": {
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/Jesstradiol/CapstoneSoloProject#readme",
   "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-plugin-react": "^7.21.5",
     "nodemon": "^2.0.6"
   }
 }
