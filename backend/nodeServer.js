@@ -1,35 +1,23 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import data from './data.js';
+import dotenv from 'dotenv';
+import albumRouter from './routers/albumRouter.js';
 import userRouter from './routers/userRouter.js';
 
 
+dotenv.congig();
 const app = express();
 
-mongoose.connect('mongodb://localhost/capstoneMusicStore', {
+// eslint-disable-next-line no-undef
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/capstoneMusicStore', {
        useNewUrlParser: true,
        useUnifiedTopology: true,
        useCreateIndex: true,
-
-});
-
-app.get('/api/albums/:Id', (req, res) => {
-    const album = data.albums.find((x) => x._Id === req.params.Id);
-    if(album) {
-        res.send(album);
-    } else {
-        res.status(404).send({message:'Product Not Found'});
-    }
-    });
-
-
-app.get('/api/albums', (req, res) => {
-res.send(data.albums);
 });
 
 
-app.use('/api/albums', userRouter);
-
+app.use('/api/users', userRouter);
+app.use('/api/albums', albumRouter);
 app.get('/', (req, res) => {
 res.send('Server is Locked and Loaded');
 });
